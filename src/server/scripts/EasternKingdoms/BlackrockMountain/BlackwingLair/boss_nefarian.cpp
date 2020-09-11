@@ -314,12 +314,12 @@ public:
                         case EVENT_FEAR:
                             if (Unit* target = SelectTarget(SELECT_TARGET_RANDOM, 0, 40, true))
                                 DoCast(target, SPELL_FEAR);
-                            events.ScheduleEvent(EVENT_FEAR, urand(10000, 20000));
+                            events.ScheduleEvent(EVENT_FEAR, urand(30000, 50000));
                             break;
                         case EVENT_MIND_CONTROL:
                             if (Unit* target = SelectTarget(SELECT_TARGET_RANDOM, 0, 40, true))
                                 DoCast(target, SPELL_SHADOW_COMMAND);
-                            events.ScheduleEvent(EVENT_MIND_CONTROL, urand(30000, 35000));
+                            events.ScheduleEvent(EVENT_MIND_CONTROL, urand(300000, 350000));
                             break;
                         case EVENT_SPAWN_ADD:
                             for (uint8 i=0; i<2; ++i)

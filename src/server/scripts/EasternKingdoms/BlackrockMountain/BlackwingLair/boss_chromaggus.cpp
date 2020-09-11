@@ -242,7 +242,7 @@ public:
                                 }
                             }
                         }
-                        events.ScheduleEvent(EVENT_AFFLICTION, 10000);
+                        events.ScheduleEvent(EVENT_AFFLICTION, 120000);
                         break;
                     case EVENT_FRENZY:
                         DoCast(me, SPELL_FRENZY);

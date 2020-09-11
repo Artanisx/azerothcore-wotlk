@@ -69,7 +69,7 @@ public:
                         break;
                     case EVENT_SHADOWOFEBONROC:
                         DoCastVictim(SPELL_SHADOWOFEBONROC);
-                        events.ScheduleEvent(EVENT_SHADOWOFEBONROC, urand(8000, 10000));
+                        events.ScheduleEvent(EVENT_SHADOWOFEBONROC, urand(40000, 60000));
                         break;
                 }
             }

@@ -83,7 +83,8 @@ public:
 
             secondPhase = true;
             me->RemoveAllAuras();
-            me->SetHealth(me->GetMaxHealth());
+            //Though we can't go to second phase let's make sure he doesn't  get full hp...
+            //me->SetHealth(me->GetMaxHealth());
         }
 
         void DoAction(int32 action)
@@ -92,11 +93,12 @@ public:
                 DoChangePhase();
         }
 
-        void DamageTaken(Unit*, uint32& damage, DamageEffectType, SpellSchoolMask)
-        {
-            if (!secondPhase)
-                damage = 0;
-        }
+        //void DamageTaken(Unit*, uint32& damage, DamageEffectType, SpellSchoolMask)
+        //{
+            // Make him damageable even if we're not in the phase without eggs
+            //if (!secondPhase)
+            //    damage = 0;
+        //}
 
         void UpdateAI(uint32 diff)
         {

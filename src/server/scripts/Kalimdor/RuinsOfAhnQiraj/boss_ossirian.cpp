@@ -207,9 +207,9 @@ class boss_ossirian : public CreatureScript
 
                 events.Update(diff);
 
-                // No kiting!
-                if (me->GetDistance(me->GetVictim()) > 60.00f && me->GetDistance(me->GetVictim()) < 120.00f)
-                    DoCastVictim(SPELL_SUMMON);
+                // Yes  kiting!
+                //if (me->GetDistance(me->GetVictim()) > 60.00f && me->GetDistance(me->GetVictim()) < 120.00f)
+                //    DoCastVictim(SPELL_SUMMON);
 
                 bool ApplySupreme = true;
 
@@ -239,15 +239,15 @@ class boss_ossirian : public CreatureScript
                     {
                         case EVENT_SILENCE:
                             DoCast(me, SPELL_SILENCE);
-                            events.ScheduleEvent(EVENT_SILENCE, urand(20000, 30000));
+                            events.ScheduleEvent(EVENT_SILENCE, urand(40000, 60000));
                             break;
                         case EVENT_CYCLONE:
                             DoCastVictim(SPELL_CYCLONE);
-                            events.ScheduleEvent(EVENT_CYCLONE, 20000);
+                            events.ScheduleEvent(EVENT_CYCLONE, 40000);
                             break;
                         case EVENT_STOMP:
                             DoCast(me, SPELL_STOMP);
-                            events.ScheduleEvent(EVENT_STOMP, 30000);
+                            events.ScheduleEvent(EVENT_STOMP, 60000);
                             break;
                         default:
                             break;
